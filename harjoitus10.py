@@ -1,3 +1,5 @@
+# no comments!!!
+
 nimet = [line.rstrip("\n") for line in open("nimet.txt")]
 #nimi=[]
 #for i in range(len(nimet)):
