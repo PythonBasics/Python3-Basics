@@ -3,18 +3,21 @@ from collections import Counter
 # "log" --> all ip-addresses
 # "banned_log" --> all banned addresses
 
+# examples of ip-addresses:
 # 192.168.0.1
 # 192.168.0.1
 # 127.0.0.1
 
 print("\n*** Beginning Banned Log - Project ***\n")
 
+# read ip-addresses from .txt file
 ip_list = [line.rstrip("\n") for line in open("iplist.txt")]
 
 log = ip_list
 
 banned_log = [
-    "1.1.1.1",
+    # manually banned ip-addresses
+    "127.0.0.1",
     "2.2.2.2"
 ]
 
