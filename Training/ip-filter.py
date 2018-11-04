@@ -11,9 +11,8 @@ from collections import Counter
 print("\n*** Beginning Banned Log - Project ***\n")
 
 # read ip-addresses from .txt file
-ip_list = [line.rstrip("\n") for line in open("iplist.txt")]
-
-log = ip_list
+file = "iplist.txt"
+log = [line.rstrip("\n") for line in open("iplist.txt")]
 
 banned_log = [
     # manually banned ip-addresses
