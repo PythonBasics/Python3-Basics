@@ -1,30 +1,28 @@
 from collections import Counter
 
-# "log" --> all ip-addresses
-# "banned_log" --> all banned addresses
+print("\n*** Beginning Banned IP-Address Log - Project ***\n")
 
-# examples of ip-addresses:
-# 192.168.0.1
-# 192.168.0.1
-# 127.0.0.1
+# log --> ip-addresses
+# banned_log --> banned addresses
 
-print("\n*** Beginning Banned Log - Project ***\n")
+FILE = "iplist.txt"  # read ip-addresses from FILE
+MIN_NUMBER_OF_MATCHES = 3
+MANUALLY_BANNED_IP_ADDRESSES = \
+    [
+        "127.0.0.1",
+        "2.2.2.2",
+        "1.2.3.4"
+    ]
 
-# read ip-addresses from .txt file
-file = "iplist.txt"
-log = [line.rstrip("\n") for line in open("iplist.txt")]
+log = [line.rstrip("\n") for line in open(FILE)]
 
-banned_log = [
-    # manually banned ip-addresses
-    "127.0.0.1",
-    "2.2.2.2"
-]
+banned_log = MANUALLY_BANNED_IP_ADDRESSES
 
 cnt = Counter()
 for address in log:
     cnt[address] += 1
-    if cnt[address] >= 3:
+    if cnt[address] >= MIN_NUMBER_OF_MATCHES:  # edit the number
         print("Address " + address + " contained in log file " + str(cnt[address]) + " times.")
         banned_log.append(address)
 
-print("banned log" + str(banned_log))
+print("banned log: " + str(banned_log))
