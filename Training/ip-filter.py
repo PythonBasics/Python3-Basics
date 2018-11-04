@@ -22,7 +22,7 @@ cnt = Counter()
 for address in log:
     cnt[address] += 1
     if cnt[address] >= 3:
-        print("Address " + address + " contained in log file " + str(cnt[address]) + " times.");
-        banned_log.append(address);
+        print("Address " + address + " contained in log file " + str(cnt[address]) + " times.")
+        banned_log.append(address)
 
-print("banned log" + str(banned_log));
+print("banned log" + str(banned_log))
