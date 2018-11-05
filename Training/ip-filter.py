@@ -21,7 +21,7 @@ banned_log = MANUALLY_BANNED_IP_ADDRESSES
 cnt = Counter()
 for address in log:
     cnt[address] += 1
-    if cnt[address] >= MIN_NUMBER_OF_MATCHES:  # edit the number
+    if cnt[address] >= MIN_NUMBER_OF_MATCHES:
         print("Address " + address + " contained in log file " + str(cnt[address]) + " times.")
         banned_log.append(address)
 
