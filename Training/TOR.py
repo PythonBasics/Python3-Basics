@@ -1,3 +1,12 @@
+#https://gist.github.com/jefftriplett/9748036
+    # setup:
+    #     pip install requests
+    #     pip install requests[socks]
+    # super helpful:
+    #     - http://packetforger.wordpress.com/2013/08/27/pythons-requests-module-with-socks-support-requesocks/
+    #     - http://docs.python-requests.org/en/master/user/advanced/#proxies
+
+
 import requests
 
 
