@@ -17,7 +17,7 @@ proxies = {
 
 
 def main():
-    url = 'http://ifconfig.me/ip'
+    url = 'http://ankka.com/?ip'
 
     response = requests.get(url)
     print('ip: {}'.format(response.text.strip()))
