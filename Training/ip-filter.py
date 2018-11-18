@@ -6,17 +6,20 @@ log = []         # IP-addresses
 banned_log = []  # banned IP-addresses
 
 FILE = "iplist.txt"  # read ip-addresses from FILE
+FILE = "C:\Python-files\GitHub\Training\~iplist.txt"
+
 MIN_NUMBER_OF_MATCHES = 3
 MANUALLY_BANNED_IP_ADDRESSES = \
-    [
+    [ 
         "127.0.0.1",
         "2.2.2.2",
         "1.2.3.4"
     ]
-
-log = [line.rstrip("\n") for line in open(FILE)]
+    
+# log = [line.rstrip("\n") for line in open(FILE)]
 
 banned_log = MANUALLY_BANNED_IP_ADDRESSES
+log = banned_log
 
 cnt = Counter()
 for ip_address in log:
@@ -26,3 +29,4 @@ for ip_address in log:
         banned_log.append(ip_address)
 
 print("banned log: " + str(banned_log))
+
